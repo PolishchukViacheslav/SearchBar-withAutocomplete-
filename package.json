@@ -1,5 +1,6 @@
 {
-  "name": "tt_autocomplete_search_component",
+  "name": "autocomplete_search_component",
+  "author": "PolishchukViacheslav",
   "version": "0.1.0",
   "private": true,
   "scripts": {

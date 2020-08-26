@@ -1,4 +1,4 @@
-# tt_autocomplete_search_component
+# autocomplete_search_component
 
 ## Project setup
 ```

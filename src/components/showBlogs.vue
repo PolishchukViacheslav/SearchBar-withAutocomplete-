@@ -9,7 +9,7 @@
             </div> -->
             <div v-if="filteredBlogs">
                 <ul>
-                    <li v-for="blog in filteredBlogs" :key="blog.id">{{blog.title}}</li>
+                    <li v-for="blog in filteredBlogs" :key="blog.id" @click="setBlogTitle(blog.title)">{{blog.title}}</li>
                 </ul>
             </div>
         </div>
@@ -25,14 +25,17 @@ export default {
             filteredBlogs: []
         }
     },
-    // methods: {
-    //     searchBlogTitle(){
-    //         this.filteredBlogs = this.blogs.filter(({ title }) => (
-    //             title.toLowerCase().indexOf(this.blogTitle.toLowerCase) !== -1
-    //         ));
-    //         console.log("input",this.blogTitle);
-    //     }
-    // },
+    methods: {
+        // searchBlogTitle(){
+        //     this.filteredBlogs = this.blogs.filter(({ title }) => (
+        //         title.toLowerCase().indexOf(this.blogTitle.toLowerCase) !== -1
+        //     ));
+        //     console.log("input",this.blogTitle);
+        // }
+        setBlogTitle(title) {
+            this.blogTitle = title
+        }
+    },
     watch: {
         blogTitle() {
             this.filteredBlogs = this.blogs
